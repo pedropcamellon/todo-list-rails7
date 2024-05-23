@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_project
+  validates :project, presence: true
 
   # POST /tasks or /tasks.json
   def create
