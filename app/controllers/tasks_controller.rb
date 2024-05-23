@@ -3,15 +3,8 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = Task.new(task_params)
-
-    respond_to do |format|
-      if @task.save
-        format.html { redirect_to project_url(@project), notice: "Task was successfully added." }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
-    end
+    @task = @project.tasks.create(task_params)
+    redirect_to @project
   end
 
     private

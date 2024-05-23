@@ -1,13 +1,9 @@
 <ul>
-    <p><%= taks.content %></p>
-
-    <% unless @tasks.nil? || !@tasks.empty? %>
+    <% unless @tasks.nil? && @tasks.empty? %>
         <% @tasks.each do |task| %>
-            <li><%= task.content %></li>
+            <%= render task %>
         <% end %>
     <% else %>
         <li>You have no tasks for this project.</li>
-
-        <%= link_to "Add task", new_project_task_path(@project) %>
     <% end %>
 </ul>
