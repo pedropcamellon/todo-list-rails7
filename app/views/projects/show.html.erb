@@ -12,5 +12,8 @@
 <div>
 <h2>Tasks</h2>
   <%= render @project.tasks %>
-  <%= link_to "Add task", new_project_task_path(@project) %>
+  
+  <div id="form">
+    <%= render "tasks/form" %>
+  </div>
 </div>

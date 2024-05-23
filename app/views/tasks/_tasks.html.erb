@@ -5,5 +5,7 @@
         <% end %>
     <% else %>
         <li>You have no tasks for this project.</li>
+
+        <%= link_to "Add task", new_project_task_path(@project) %>
     <% end %>
 </ul>
