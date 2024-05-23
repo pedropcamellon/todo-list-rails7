@@ -1,1 +1,5 @@
-<li><%= task.content %></li>
+<li>
+<%= task.content %>
+
+<%= button_to "Delete", project_task_path(@project, task), method: :delete, data: { confirm: "Are you sure?" } %>
+</li>
