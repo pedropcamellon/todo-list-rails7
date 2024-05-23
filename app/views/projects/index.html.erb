@@ -3,6 +3,10 @@
 <h1>Projects</h1>
 
 <div id="projects">
+  <p>
+    <strong>Number of projects:</strong>
+    <%= @projects.count %>
+  </p>
   <% @projects.each do |project| %>
     <%= render project %>
     <p>

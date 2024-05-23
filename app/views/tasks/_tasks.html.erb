@@ -1,4 +1,6 @@
 <ul>
+    <p><%= taks.content %></p>
+
     <% unless @tasks.nil? || !@tasks.empty? %>
         <% @tasks.each do |task| %>
             <li><%= task.content %></li>
