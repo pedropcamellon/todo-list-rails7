@@ -1,12 +1,11 @@
 <div id="<%= dom_id project %>" class="project-list-item">
   <%= render "project_title", title: project.title %>
 
-  <h4>Description:</h4>
   <p>
     <%= project.description %>
   </p>
 
   <p>
-    <%= link_to "Show", project %>
+    <%= link_to "Show", project, class: "btn btn-secondary" %>
   </p>
 </div>
